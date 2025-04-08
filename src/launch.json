@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Lancer React sur localhost:3000",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}/frontend/src",
+        "preLaunchTask": "Lancer React (npm start)"
+      },
+      {
+        "type": "python",
+        "request": "launch",
+        "name": "Lancer Backend Flask",
+        "module": "flask",
+        "env": {
+          "FLASK_APP": "app.py"
+        },
+        "justMyCode": true,
+        "preLaunchTask": "Lancer Flask (python3 app.py)"
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Lancer Frontend + Backend",
+        "configurations": [
+          "Lancer React sur localhost:3000",
+          "Lancer Backend Flask"
+        ]
+      }
+    ]
+  }
