@@ -613,7 +613,7 @@ function App() {
       </div>
     </div>
   );
-} jerome 
+}
 
 
 export default App;
